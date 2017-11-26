@@ -1,7 +1,8 @@
 # zoophy-ui-jumps
 Update of [ZooPhy's UI](https://github.com/ZooPhy/zoophy-ui) to support asymmetric markov jump analysis. 
 ## Dependencies
-See [ZooPhy UI dependencies](https://github.com/ZooPhy/zoophy-ui) 
+See [ZooPhy UI dependencies](https://github.com/ZooPhy/zoophy-ui). 
+Requires ZooPhy services supporting markov jumps 
 ## Modifications
 * Updated views to include option for markov jumps under Advanced Options
 * Updated job JSON in route /run to include new variable **useJumps** from Advanced Options
