@@ -75,6 +75,8 @@ router.post('/run', function(req, res) {
       }
     }
     let useGLM = Boolean(req.body.useGLM === true);
+    //add use jumps boolean to JSON post body @matteo-V
+    let useJumps = Boolean(req.body.xmlOptions.useJumps === true);
     let predictors = null;
     if (useGLM && req.body.predictors !== undefined && req.body.predictors !== null) {
       logger.info('Job is using Custom Predictors');
@@ -95,10 +97,11 @@ router.post('/run', function(req, res) {
     }
     let xmlOptions = null;
     if (checkInput(req.body.xmlOptions.chainLength, 'number', null) && checkInput(req.body.xmlOptions.subSampleRate, 'number', null) && checkInput(req.body.xmlOptions.substitutionModel, 'string', MODEL_RE)) {
+      
       xmlOptions = {
         chainLength: Number(req.body.xmlOptions.chainLength),
         subSampleRate: Number(req.body.xmlOptions.subSampleRate),
-        substitutionModel: String(req.body.xmlOptions.substitutionModel)
+        substitutionModel: String(req.body.xmlOptions.substitutionModel),
       };
     }
     else {
@@ -110,6 +113,8 @@ router.post('/run', function(req, res) {
         replyEmail: email,
         jobName: jobName,
         useGLM: useGLM,
+        //add use jumps to zoophy job JSON @matteo-V
+        useJumps: useJumps,
         predictors: predictors,
         xmlOptions: xmlOptions
       });

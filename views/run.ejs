@@ -61,7 +61,7 @@
   <div class="row">
     <h3 class="pushed-down text-center">Advanced Parameters</h3>
     <div id="xml-options">
-      <div class="col-sm-2 col-sm-offset-2">
+      <div class="col-sm-2 col-sm-offset-1">
         <label>Substition Model</label>
         <select class="form-control" ng-model="substitutionModel" ng-options="model as model for model in availableModels">
           <!-- handled by Angular -->
@@ -80,6 +80,11 @@
         <select class="form-control" ng-model="treePrior" ng-options="prior as prior for prior in availablePriors">
           <!-- handled by Angular -->
         </select>
+      </div>
+      <div class="col-sm-2">
+        <label class="checkbox-label">Markov Jumps</label>
+        <input ng-model="useJumps" type= "checkbox">
+        </input>
       </div>
     </div>
   </div>
