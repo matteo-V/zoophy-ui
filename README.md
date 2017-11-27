@@ -5,7 +5,7 @@ See [ZooPhy UI dependencies](https://github.com/ZooPhy/zoophy-ui).
 Requires ZooPhy services supporting markov jumps 
 ## Modifications
 * Updated views to include option for markov jumps under Advanced Options
-* Updated job JSON in route /run to include new variable **useJumps** from Advanced Options
+* Updated JSON post in route/run to include new variable **useJumps** from Advanced Options
 ## Setup
 (Retained from [ZooPhy UI setup](https://github.com/ZooPhy/zoophy-ui) written by @developerDemetri )
 * Create a secret_settings.js file in the bin folder with your configuration details. Refer to settings_template.js
